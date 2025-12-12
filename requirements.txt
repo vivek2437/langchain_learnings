@@ -1,5 +1,7 @@
+langchain
 langchain_community
 langchain-google-genai
 python-dotenv
 langchain-ollama
 langchain_core
+pydantic
