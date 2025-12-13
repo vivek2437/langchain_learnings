@@ -1,7 +1,7 @@
 from langchain_ollama import ChatOllama
 from langchain_core.prompts import PromptTemplate
-from langchain.output_parsers import StructuredOutputParser, ResponseSchema
-from langchain.output_parsers import OutputFixingParser
+from langchain_core.output_parsers import StructuredOutputParser, ResponseSchema
+from langchain_core.output_parsers import OutputFixingParser
 
 model = ChatOllama(
     model="gemma:2b"

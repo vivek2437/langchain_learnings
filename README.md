@@ -1,19 +1,6 @@
-# LangChain Experiments (CyberPulse-Sniffer)
+# LangChain Experiments 
 
 Small LangChain + Ollama exercises covering single-turn prompts, prompt templates, structured outputs, and output-parsing workflows.
-
-## Repository Layout
-- [1.LLMInteraction/ollama_chat.py](1.LLMInteraction/ollama_chat.py) — single prompt to the local Ollama `gemma:2b` model.
-- [2.Chatbots/1.chatbot.py](2.Chatbots/1.chatbot.py) — simple REPL chat loop that maintains `chat_history` and exits on `exit`/`quit`.
-- [2.Chatbots/2.chatprompttemp.py](2.Chatbots/2.chatprompttemp.py) — uses `ChatPromptTemplate` for domain/topic-driven responses.
-- [2.Chatbots/messageplaceholde.py](2.Chatbots/messageplaceholde.py) — shows `MessagesPlaceholder`; adjust the key to `chatbot_history` when invoking so it matches the placeholder.
-- [3.StructuredOutputs/1.structuredoutput.py](3.StructuredOutputs/1.structuredoutput.py) — minimal `TypedDict` schema with `with_structured_output`.
-- [3.StructuredOutputs/2.deatailed_output_structured.py](3.StructuredOutputs/2.deatailed_output_structured.py) — richer `TypedDict` schema with annotated guidance for summaries, sentiment, pros/cons.
-- [3.StructuredOutputs/3.strucutred_op.py](3.StructuredOutputs/3.strucutred_op.py) — `pydantic.BaseModel` schema enforcing literals and optional fields.
-- [4.Outputparsers/1.stroutparsers.py](4.Outputparsers/1.stroutparsers.py) — two-step prompt chain with `StrOutputParser` composing generation and summarization.
-- [4.Outputparsers/structureoutputparsers.py](4.Outputparsers/structureoutputparsers.py) — `StructuredOutputParser` + `OutputFixingParser` to coerce responses into JSON with three facts.
-- [chatbot_history.txt](chatbot_history.txt) — sample history file (plain text, one message per line).
-- [requirements.txt](requirements.txt) — Python dependencies.
 
 ## Prerequisites
 - Python 3.10+.
@@ -46,6 +33,9 @@ pip install -r requirements.txt
 - Structured output (Pydantic, literals): `python 3.StructuredOutputs/3.strucutred_op.py`
 - Output parser chain (double pass): `python 4.Outputparsers/1.stroutparsers.py`
 - JSON facts with structured parser: `python 4.Outputparsers/structureoutputparsers.py`
+- Sequential chain (report + summary): `python 5.Chains/1.sequential_chains.py`
+- Conditional chain (sentiment routing): `python 5.Chains/2.conditional_chains.py`
+- Parallel chain (notes + questions): `python 5.Chains/3.parallel_chain.py`
 
 ## Troubleshooting
 - Import underlined (e.g., `langchain_google_genai`): activate the venv, then `pip install langchain-google-genai` (already in `requirements.txt`). Restart the editor’s language server if it stays yellow.
@@ -58,3 +48,6 @@ pip install -r requirements.txt
 - LangChain chat models accept message lists (System/Human/AI), which maps naturally to `ChatOllama` invocations.
 - `with_structured_output` enforces response shapes; start simple with `TypedDict`, then move to `BaseModel` when you need stricter validation.
 - `StructuredOutputParser` plus `OutputFixingParser` can repair slightly off-spec generations by re-parsing through the LLM.
+- **Sequential chains** pass output from one step as input to the next (linear flow: A → B → C).
+- **Conditional chains** use `RunnablePassBranch` to route data through different paths based on runtime conditions (if-else logic).
+- **Parallel chains** with `RunnableParallel` execute multiple branches concurrently, then merge results—ideal for independent tasks like generating notes and questions simultaneously.
