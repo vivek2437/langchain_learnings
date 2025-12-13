@@ -1,4 +1,4 @@
-# LangChain Experiments 
+# LangChain & LangGraph Learnings
 
 A hands-on learning repository exploring LangChain with Ollama's local LLM models. This collection demonstrates core concepts including prompt engineering, chat interfaces, structured outputs, output parsing strategies, and advanced chain patterns (sequential, conditional, and parallel execution).
 
