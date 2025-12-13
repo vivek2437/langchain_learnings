@@ -1,6 +1,6 @@
 # LangChain Experiments 
 
-Small LangChain + Ollama exercises covering single-turn prompts, prompt templates, structured outputs, and output-parsing workflows.
+A hands-on learning repository exploring LangChain with Ollama's local LLM models. This collection demonstrates core concepts including prompt engineering, chat interfaces, structured outputs, output parsing strategies, and advanced chain patterns (sequential, conditional, and parallel execution).
 
 ## Prerequisites
 - Python 3.10+.
