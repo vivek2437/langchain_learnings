@@ -1,6 +1,6 @@
 # LangChain Experiments 
 
-A hands-on learning repository exploring LangChain with Ollama's local LLM models. This collection demonstrates core concepts including prompt engineering, chat interfaces, structured outputs, output parsing strategies, and advanced chain patterns (sequential, conditional, and parallel execution).
+A hands-on learning repository exploring LangChain with Ollama's local LLM models. This collection demonstrates core concepts including prompt engineering, chat interfaces, structured outputs, output parsing strategies, and chain patterns (sequential, conditional, parallel), plus runnable patterns for concurrent executions.
 
 ## Prerequisites
 - Python 3.10+.
@@ -36,6 +36,7 @@ pip install -r requirements.txt
 - Sequential chain (report + summary): `python 5.Chains/1.sequential_chains.py`
 - Conditional chain (sentiment routing): `python 5.Chains/2.conditional_chains.py`
 - Parallel chain (notes + questions): `python 5.Chains/3.parallel_chain.py`
+- Parallel runnables (tweet + LinkedIn): `python 8.Runnables/2.runnnables_parallel.py`
 
 ## Troubleshooting
 - Import underlined (e.g., `langchain_google_genai`): activate the venv, then `pip install langchain-google-genai` (already in `requirements.txt`). Restart the editor’s language server if it stays yellow.
