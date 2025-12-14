@@ -1,7 +1,11 @@
 python-dotenv
 pydantic
 langchain
-langchain-core
-langchain-community
-langchain-ollama
-langchain-google-genai
+langchain_core
+langchain_community
+langchain_ollama
+langchain_google_genai
+langchain_huggingface
+sentence-transformers
+scikit-learn
+faiss-cpu
