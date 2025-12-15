@@ -9,3 +9,8 @@ langchain_huggingface
 sentence-transformers
 scikit-learn
 faiss-cpu
+pypdf
+bs4
+langchain_chroma
+Wikipedia
+youtube-transcript-api
