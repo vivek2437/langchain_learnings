@@ -11,6 +11,10 @@ Hands-on examples exploring LangChain with Ollama local LLMs. Covers prompt temp
 - 6.Embeddings: Hugging Face embeddings example
 - 7.Basic RAG: minimal retrieval-augmented generation
 - 8.Runnables: sequences and parallel runnables
+- 9.DocumentLoader: loading and processing documents
+- 10.VectorStore: Chroma vector store with document storage and retrieval
+- 11.Retrievers: document retrieval strategies
+- 12.Project-1: YouTube transcript extraction and QA system using RAG
 
 ## Prerequisites
 - Python 3.10+
@@ -49,6 +53,8 @@ You can store API keys in a .env file (e.g., GOOGLE_API_KEY=...). This repositor
 - Runnables:
   - python 8.Runnables/1.runnables_sequences.py
   - python 8.Runnables/2.runnnables_parallel.py
+- Vector Store: python 10.VectorStore/1.vector_store.py
+- Project 1 (YouTube QA): python 12.Project-1/1.system.py
 
 ## Troubleshooting
 - Missing imports (e.g., langchain_google_genai): ensure venv is active, then pip install -r requirements.txt
