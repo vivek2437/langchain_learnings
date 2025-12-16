@@ -1,6 +1,6 @@
 ﻿# LangChain Examples (Windows)
 
-Hands-on examples exploring LangChain with Ollama local LLMs. Covers prompt templates, chat interfaces, structured outputs, output parsers, chains (sequential/conditional/parallel), and runnable patterns.
+Hands-on examples exploring LangChain with Ollama local LLMs. Covers prompt templates, chat interfaces, structured outputs, output parsers, chains (sequential/conditional/parallel), runnable patterns, tools, and simple RAG flows.
 
 ## Repository Structure
 - 1.LLMInteraction: basic chat with Ollama
@@ -15,6 +15,7 @@ Hands-on examples exploring LangChain with Ollama local LLMs. Covers prompt temp
 - 10.VectorStore: Chroma vector store with document storage and retrieval
 - 11.Retrievers: document retrieval strategies
 - 12.Project-1: YouTube transcript extraction and QA system using RAG
+- 13.tools: tools definitions, structured tools, toolkits, and combined tool pipelines
 
 ## Prerequisites
 - Python 3.10+
@@ -33,7 +34,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 `
 
 ## Environment
-You can store API keys in a .env file (e.g., GOOGLE_API_KEY=...). This repository ignores .env and env/ by default.
+You can store API keys in a .env file (e.g., GOOGLE_API_KEY=...). This repository ignores .env and venv/ by default (see .gitignore).
 
 ## Quickstart
 - Basic chat: python 1.LLMInteraction/ollama_chat.py
@@ -55,6 +56,12 @@ You can store API keys in a .env file (e.g., GOOGLE_API_KEY=...). This repositor
   - python 8.Runnables/2.runnnables_parallel.py
 - Vector Store: python 10.VectorStore/1.vector_store.py
 - Project 1 (YouTube QA): python 12.Project-1/1.system.py
+- Tools:
+  - python 13.tools/1.tools.py
+  - python 13.tools/2.structured_tools.py
+  - python 13.tools/3.toolkit.py
+  - python 13.tools/4.tool_binding.py
+  - python 13.tools/5.finaltool.py
 
 ## Troubleshooting
 - Missing imports (e.g., langchain_google_genai): ensure venv is active, then pip install -r requirements.txt
